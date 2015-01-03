@@ -1,10 +1,12 @@
 
 
-
-<form data-ng-controller="SimpleController">                
+<div data-ng-controller="SimpleController as ctrl">
+<form  data-ng-submit="ctrl.editCustomer()">                
     <ul>
         <li ><input type="hidden" data-ng-model="customer.id" value="{{customer.id}}"> {{customer.id}}</li>
         <li ><input type="text" data-ng-model="customer.name" value="{{customer.name}}"> {{customer.name}}</li>
         <li ><input type="text" data-ng-model="customer.city" value="{{customer.city}}"> {{customer.city}}</li>
+        <li ><button type="submit">Enviar</button></li>
     </ul>
 </form>        
+</div>

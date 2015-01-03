@@ -1,9 +1,9 @@
 
 
 <input type="text" data-ng-model="name"/>
-<div data-ng-controller="SimpleController">            
-    <ul>
-        <li data-ng-repeat="customer in customers| filter:name">
+<div data-ng-controller="SimpleController as ctrl">            
+    <ul >
+        <li data-ng-repeat="customer in ctrl.getCustomers() | filter:name">
             {{customer.name}} - {{customer.city}}
             <a href="#/edit/{{customer.id}}">Edit</a>
         </li>
