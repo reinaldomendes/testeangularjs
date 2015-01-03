@@ -1,0 +1,11 @@
+
+
+<input type="text" data-ng-model="name"/>
+<div data-ng-controller="SimpleController">            
+    <ul>
+        <li data-ng-repeat="customer in customers| filter:name">
+            {{customer.name}} - {{customer.city}}
+            <a href="#/edit/{{customer.id}}">Edit</a>
+        </li>
+    </ul>
+</div>        
