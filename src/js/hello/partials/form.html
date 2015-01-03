@@ -1,7 +1,7 @@
 
 
 <div data-ng-controller="SimpleController as ctrl">
-<form  data-ng-submit="ctrl.editCustomer()">                
+<form  data-ng-submit="ctrl.saveCustomer()">                
     <ul>
         <li ><input type="hidden" data-ng-model="customer.id" value="{{customer.id}}"> {{customer.id}}</li>
         <li ><input type="text" data-ng-model="customer.name" value="{{customer.name}}"> {{customer.name}}</li>

@@ -12,6 +12,22 @@ requirejs(['helloApp'], function (app) {
             return _.find(_customers,function(o){return o.id == id;});
         };
         
+        this.findOrNew = function(id){
+            var val = this.find(id);
+            if(val === undefined){
+                val = {}
+            };
+            return val;
+        }
+        
+        this.addCustomer = function(object){
+            if(!object.id){
+                object.id = _.max(_customers, function(o){ return o.id; }) + 1;
+                _customers.push(object);                
+            }
+            
+        }
+        
         this.getCustomers = function () {
             return _customers;
         };

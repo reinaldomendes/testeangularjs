@@ -5,7 +5,8 @@
     <ul >
         <li data-ng-repeat="customer in ctrl.getCustomers() | filter:name">
             {{customer.name}} - {{customer.city}}
-            <a href="#/edit/{{customer.id}}">Edit</a>
+            <a data-ng-href="#/edit/{{customer.id}}">Edit</a>
         </li>
+        <li> <a data-ng-href="#/new/">New</a></li>
     </ul>
 </div>        
