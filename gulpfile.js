@@ -8,7 +8,7 @@ var htmlmin = require('gulp-html-minifier');
 gulp.task('js', function () {
     gulp.src('src/js/**/*.js')  
             .pipe(concat('main.js'))
-//            .pipe(uglify('main.js'))
+ //           .pipe(uglify('main.js'))
             .pipe(gulp.dest('dist/js'));
 });
 

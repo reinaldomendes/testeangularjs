@@ -34,14 +34,14 @@ require.config({
 });
 
 //wait don't execute bootstrap onload
-window.name = "NG_DEFER_BOOTSTRAP!";
+//window.name = "NG_DEFER_BOOTSTRAP!";
 
 //define helloapp angular module
 define('helloApp', ['angular', 'angular-route', 'underscore'], function () {
     var app = angular.module('helloApp', ['ngRoute']);
-    //defer resume bootstrap
+    //defer resume bootstrap    
     setTimeout(function () {
-        angular.resumeBootstrap();
+        angular.bootstrap(document,['helloApp']);
     });    
     
     return app;
